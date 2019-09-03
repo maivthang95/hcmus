@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container mt-5">
+     <table class="table table-bordered table-striped table-hover table-dark">
+       <thead>
+         <tr>
+           <th >Mã số</th>
+           <th >Họ tên</th>
+           <th >Giới tính</th>
+           <th >Lớp</th>
+           <th >Mã lớp</th>
+           <th >Điểm Module 1</th>
+           <th >Điểm Module 2</th>
+           <th >Điểm Module 3</th>
+         </tr>
+       </thead>
+       <tbody>
+         <tr>
+           <td id="id"></td>
+           <td id="full_name"></td>
+           <td id="gender"></td>
+           <td id="class_id"></td>
+           <td id="class_name"></td>
+           <td id="m1"></td>
+           <td id="m2"></td>
+           <td id="m3"></td>
+         </tr>
+        
+       </tbody>
+     </table>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+  <script src="../Xu_ly/Xu_ly_3L.js"></script>
+  <script>
+    let fileDataJSON = readFile("hoc_vien.json");
+    let fileData = JSON.parse(fileDataJSON);
+    id.innerHTML = fileData.id ;
+    full_name.innerHTML = fileData.full_name ; 
+    gender.innerHTML = fileData.gender ? "female" : "male"; 
+    class_name.innerHTML = fileData.class.class_name ; 
+    class_id.innerHTML = fileData.class.class_id;
+    m1.innerHTML = fileData.marks[0];
+    m2.innerHTML = fileData.marks[1];
+    m3.innerHTML = fileData.marks[2];
+  </script>
+</html>

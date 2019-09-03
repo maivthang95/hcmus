@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Đọc Cửa hàng</title>
+</head>
+<body>
+    <div id="Th_Ten"></div>
+    <div id="Th_Dia_chi"></div>
+    <script src="../Xu_ly/Xu_ly_3L.js"></script>  
+    <script>
+        let fileDataJSON = readFile("store.json");
+        let fileData = JSON.parse(fileDataJSON);
+        Th_Ten.innerHTML = fileData.name ; 
+        Th_Ten.innerHTML = fileData.address ;
+    </script>
+</body>
+</html>
